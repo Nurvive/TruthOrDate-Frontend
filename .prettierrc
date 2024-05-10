@@ -1,0 +1,36 @@
+{
+  "arrowParens": "always",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "endOfLine": "auto",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "printWidth": 120,
+  "proseWrap": "preserve",
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.ts",
+        "*.tsx",
+        "*.jsx"
+      ],
+      "options": {
+        "parser": "typescript"
+      }
+    },
+    {
+      "files": [
+        "**/*.json",
+        ".prettierrc",
+        ".eslintrc"
+      ],
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}

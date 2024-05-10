@@ -1,0 +1,161 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:solid/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.tsx?"
+      ],
+      "env": {
+        "browser": true
+      },
+      "globals": {
+        "window": true,
+        "document": true
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "solid",
+    "@typescript-eslint",
+    "import",
+    "simple-import-sort",
+    "unused-imports",
+    "typescript-sort-keys",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "no-restricted-syntax": "off",
+    // В for...of циклах ничего плохого нет
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": [
+          "/"
+        ]
+      }
+    ],
+    /// разрешаем ts-require directive
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "no-alert": "off",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "indent": "off",
+    "max-len": [
+      "error",
+      120,
+      2,
+      {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreRegExpLiterals": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "if"
+      }
+    ],
+    "implicit-arrow-linebreak": "off",
+    "no-plusplus": "off",
+    "no-void": "off",
+    "max-classes-per-file": "off",
+    "operator-linebreak": "off",
+    "object-curly-newline": "off",
+    "class-methods-use-this": "off",
+    "no-confusing-arrow": "off",
+    "function-paren-newline": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "error",
+          "warn"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-shadow": "off",
+    "consistent-return": "off",
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "import/prefer-default-export": "off",
+    // @grape: https://humanwhocodes.com/blog/2019/01/stop-using-default-exports-javascript-module/
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-anonymous-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      "off"
+    ],
+    "arrow-body-style": "off",
+    "no-unused-expressions": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "_id"
+        ]
+      }
+    ]
+  }
+}
