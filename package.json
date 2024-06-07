@@ -27,13 +27,15 @@
     "vite-plugin-solid": "^2.10.2"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@solidjs/router": "^0.13.3",
     "@suid/icons-material": "^0.7.0",
     "@suid/material": "^0.16.0",
     "@suid/vite-plugin": "^0.2.0",
     "@types/node": "^20.12.11",
+    "axios": "^1.7.2",
+    "modern-normalize": "^2.0.0",
     "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
     "solid-js": "^1.8.17"
   }
 }
